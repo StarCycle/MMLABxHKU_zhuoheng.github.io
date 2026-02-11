@@ -74,7 +74,7 @@ export default function Home() {
             {/* 视频区域 - 全屏高度 */}
             <div className="relative w-full h-screen overflow-hidden">
                 <video autoPlay muted loop playsInline poster="https://assets.kinetixai.cn/kinetixai/index/banner-20251212.jpg" className="absolute w-full h-full object-cover">
-                    <source src="https://assets.kinetixai.cn/AMS/251212_raw.mp4" type="video/mp4" />
+                    <source src="https://assets.kinetixai.cn/rise/orz.mp4" type="video/mp4" />
                 </video>
             </div>
 
