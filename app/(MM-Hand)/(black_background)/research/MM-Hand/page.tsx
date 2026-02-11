@@ -55,11 +55,18 @@ export default function Home() {
             {/* 右上角浮动导航按钮 */}
             <HeaderButtons />
 
-            {/* 视频区域 - 全屏高度 */}
-            <div className="relative w-full h-screen overflow-hidden">
-                <video autoPlay muted loop playsInline poster="https://assets.kinetixai.cn/kinetixai/index/banner-20251212.jpg" className="absolute w-full h-full object-cover">
-                    <source src="https://assets.kinetixai.cn/rise/orz.mp4" type="video/mp4" />
-                </video>
+            {/* 视频区域 - 全屏宽度，按比例自适应高度 */}
+            <div className="relative w-full aspect-video overflow-hidden">
+            <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="https://assets.kinetixai.cn/kinetixai/index/banner-20251212.jpg"
+                className="w-full h-full object-cover"
+            >
+                <source src="https://assets.kinetixai.cn/rise/orz.mp4" type="video/mp4" />
+            </video>
             </div>
 
             {/* 介绍图文区域 */}
