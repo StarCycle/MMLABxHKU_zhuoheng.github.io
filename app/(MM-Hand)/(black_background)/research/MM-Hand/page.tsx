@@ -27,6 +27,9 @@ const paths: { path: string; url: string; }[] = [
     },
 ]
 
+
+import HeaderButtons from "./header"
+
 const milestones = [
     {
         date: "Early March 2026",
@@ -50,26 +53,7 @@ export default function Home() {
     return (
         <main>
             {/* 右上角浮动导航按钮 */}
-            <div className="fixed top-6 right-6 z-50 flex items-center gap-2">
-                <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#paper">Paper</Link>
-                </Button>
-                <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#docs">Docs</Link>
-                </Button>
-                <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#github">GitHub</Link>
-                </Button>
-                <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#discord">Discord</Link>
-                </Button>
-                <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#wechat">WeChat</Link>
-                </Button>
-                <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
-                    Buy MM-Hand
-                </Button>
-            </div>
+            <HeaderButtons />
 
             {/* 视频区域 - 全屏高度 */}
             <div className="relative w-full h-screen overflow-hidden">
