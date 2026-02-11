@@ -41,7 +41,7 @@ export default function Redirect() {
         || pathname.toLowerCase().startsWith('/mm-videonav')
         || pathname.toLowerCase().startsWith('/research/mm-videonav')
     ) {
-        redirect('https://opendrivelab.com/MM-VideoNav')
+        redirect('https://opendrivelab.com/SparseVideoNav')
     }
     if (
         pathname.toLowerCase().startsWith('/mm-hand')

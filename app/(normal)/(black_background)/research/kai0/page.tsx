@@ -175,10 +175,30 @@ export default function Home() {
                                             Report
                                         </h2>
                                         <h2 className="flex-1 break-words">
-                                            Available in Late January 2026
+                                            <Link
+                                                className="text-mred animated-underline hover:text-mred"
+                                                href="https://arxiv.org/abs/2602.09021"
+                                                target="_blank"
+                                            >
+                                                2602.09021
+                                            </Link>
                                         </h2>
                                     </div>
-
+                                    {/* Repository */}
+                                    <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                                        <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                            Repository
+                                        </h2>
+                                        <h2 className="flex-1 break-words">
+                                            <Link
+                                                className="text-mred animated-underline hover:text-mred"
+                                                href="https://github.com/OpenDriveLab/kai0"
+                                                target="_blank"
+                                            >
+                                                OpenDriveLab/kai0
+                                            </Link>
+                                        </h2>
+                                    </div>
                                     {/* Email */}
                                     <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
                                         <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
@@ -200,6 +220,21 @@ export default function Home() {
                                         </h2>
                                         <h2 className="flex-1">
                                             HKU MMLab
+                                        </h2>
+                                    </div>
+                                    {/* Community */}
+                                    <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                                        <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                            Community
+                                        </h2>
+                                        <h2 className="flex-1 break-words">
+                                            <Link
+                                                className="text-mred animated-underline hover:text-mred"
+                                                href="https://discord.gg/weUGdEPpsF"
+                                                target="_blank"
+                                            >
+                                                Discord
+                                            </Link>
                                         </h2>
                                     </div>
                                     {/* Post */}

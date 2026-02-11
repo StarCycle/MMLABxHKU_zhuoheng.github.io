@@ -88,7 +88,7 @@ export default function Home() {
 
                 <FadeIn>
                     <div className="w-full max-w-7xl mt-20 flex flex-col gap-10 xl:flex-row xl:gap-20 justify-between">
-                        <Link className="h-auto xl:h-48 xl:flex-1/3 w-full relative rounded-xl shadow-sm overflow-hidden group" href="/research/kai0">
+                        <Link className="h-auto xl:h-48 xl:flex-1/3 w-full relative rounded-xl shadow-sm overflow-hidden group" target="_blank" href="/research/kai0">
                             <div>
                                 <video
                                     autoPlay muted loop playsInline
@@ -100,7 +100,7 @@ export default function Home() {
                             </div>
                         </Link>
                         <div className="flex-2/3 flex flex-col gap-6">
-                            <Link className="text-3xl font-bold hover:text-mred" href="/research/kai0">
+                            <Link className="text-3xl font-bold hover:text-mred" target="_blank" href="/research/kai0">
                                 &chi;<sub>0</sub>: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero
                             </Link>
                             <div className="flex flex-col gap-3">
