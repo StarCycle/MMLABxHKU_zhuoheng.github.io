@@ -1,10 +1,4 @@
 import type { Metadata } from "next";
-export const metadata = {
-    title: "MM Hand | HKU MMLab",
-    description: "Multimedia Laboratory",
-    keywords: ["MM Hand", "MMLab", "Multimedia Laboratory", "HKU", "CUHK", "NTU"],
-};
-
 import Image from 'next/image'
 import Link from "next/link"
 import { Slash } from "lucide-react"
@@ -20,6 +14,12 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
+export const metadata = {
+    title: "MM-Hand | HKU MMLab",
+    description: "Multimedia Laboratory",
+    keywords: ["MM-Hand", "Dexterous Hand", "open source", "low cost", "purchase", "MMLab", "Multimedia Laboratory", "HKU", "CUHK", "NTU"],
+};
+
 const paths: { path: string; url: string; }[] = [
     {
         path: "MMLab",
@@ -29,19 +29,23 @@ const paths: { path: string; url: string; }[] = [
 
 const milestones = [
     {
-        date: "Early March 2026",
+        date: "March 2026",
         title: "Paper Release"
     },
     {
         date: "April 2026",
-        title: "CAD, Assembly Guide & Code Release"
+        title: "CAD & Assembly Guide Release"
+    },
+    {
+        date: "May 2026",
+        title: "PCB & Code Release"
     },
     {
         date: "June 2026",
         title: "Beta Test Version Order"
     },
     {
-        date: "December 2026",
+        date: "Late 2026",
         title: "MM-Hand 2.0"
     }
 ]
@@ -52,13 +56,13 @@ export default function Home() {
             {/* 右上角浮动导航按钮 */}
             <div className="fixed top-6 right-6 z-50 flex items-center gap-2">
                 <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#paper">Paper</Link>
+                    <Link href="https://github.com/StarCycle/MM-Hand">Paper</Link>
                 </Button>
                 <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#docs">Docs</Link>
+                    <Link href="https://github.com/StarCycle/MM-Hand">Docs</Link>
                 </Button>
                 <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
-                    <Link href="#github">GitHub</Link>
+                    <Link href="https://github.com/StarCycle/MM-Hand">GitHub</Link>
                 </Button>
                 <Button asChild variant="ghost" className="bg-black text-white hover:bg-mred hover:text-white">
                     <Link href="#discord">Discord</Link>
@@ -89,7 +93,7 @@ export default function Home() {
                                 <span className="text-5xl md:text-7xl">MM-Hand 1.0</span>
                             </h1>
                             <p className="text-xl text-neutral-300 mb-8 max-w-2xl text-center md:text-left">
-                                MM-Hand 1.0 is a fully open-source, 21 Degree-of-Freedom, lightweight dexterous hand with multimodal sensing and modular design allows for easy disassembly and modification.
+                                MM-Hand 1.0 is a fully open-source, high degree-of-freedom, lightweight dexterous hand with multimodal sensing and modular design allows for rapid finger/motor replacement and modification.
                             </p>
                         </div>
                         
@@ -116,7 +120,7 @@ export default function Home() {
                         <div className="text-center">
                             <div className="text-5xl md:text-7xl font-bold text-cyan-400 mb-2">21</div>
                             <div className="text-xl font-bold">Degree-of-Freedom</div>
-                            <div className="text-neutral-400">Dexterous Hand</div>
+                            <div className="text-neutral-400">Fully Actuated</div>
                         </div>
                         
                         {/* 数据卡片 2 */}
@@ -137,19 +141,19 @@ export default function Home() {
                         <div className="text-center">
                             <div className="text-5xl md:text-7xl font-bold text-cyan-400 mb-2">~350</div>
                             <div className="text-xl font-bold">gram</div>
-                            <div className="text-neutral-400">Weight of Hand</div>
+                            <div className="text-neutral-400">Hand Weight without Remote Motor Hub</div>
                         </div>
                         
                         {/* 数据卡片 5 */}
                         <div className="text-center">
-                            <div className="text-5xl md:text-7xl font-bold text-cyan-400 mb-2">x</div>
-                            <div className="text-xl font-bold">kg</div>
-                            <div className="text-neutral-400">Payload</div>
+                            <div className="text-5xl md:text-7xl font-bold text-cyan-400 mb-2">20</div>
+                            <div className="text-xl font-bold">Newton</div>
+                            <div className="text-neutral-400">Maximum Fingertip Force</div>
                         </div>
                         
                         {/* 数据卡片 6 */}
                         <div className="text-center">
-                            <div className="text-5xl md:text-7xl font-bold text-cyan-400 mb-2">$2,200待确定</div>
+                            <div className="text-5xl md:text-7xl font-bold text-cyan-400 mb-2">$1,400</div>
                             <div className="text-xl font-bold">Bill of Materials Cost</div>
                             <div className="text-neutral-400">Complete System</div>
                         </div>
@@ -160,7 +164,7 @@ export default function Home() {
             {/* 功能特点部分 */}
             <section className="w-full py-16 bg-black/5">
                 <div className="max-w-6xl mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Key Features</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Features</h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* 功能 1 */}
@@ -169,13 +173,13 @@ export default function Home() {
                                 <AspectRatio ratio={16/9}>
                                     <Image
                                         src="https://assets.kinetixai.cn/kinetixai/index/feature1.jpg"
-                                        alt="Fully Open-source"
+                                        alt="Remote Actuation"
                                         fill
                                         className="object-cover"
                                     />
                                 </AspectRatio>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Fully Open-source</h3>
+                            <h3 className="text-xl font-bold text-white">Remote Actuation</h3>
                         </div>
                         
                         {/* 功能 2 */}
@@ -184,13 +188,13 @@ export default function Home() {
                                 <AspectRatio ratio={16/9}>
                                     <Image
                                         src="https://assets.kinetixai.cn/kinetixai/index/feature2.jpg"
-                                        alt="Teleoperation"
+                                        alt="Lightweight"
                                         fill
                                         className="object-cover"
                                     />
                                 </AspectRatio>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Teleoperation</h3>
+                            <h3 className="text-xl font-bold text-white">Lightweight</h3>
                         </div>
                         
                         {/* 功能 3 */}
@@ -199,13 +203,13 @@ export default function Home() {
                                 <AspectRatio ratio={16/9}>
                                     <Image
                                         src="https://assets.kinetixai.cn/kinetixai/index/feature3.jpg"
-                                        alt="Simulation"
+                                        alt="High Degree-of-Freedom"
                                         fill
                                         className="object-cover"
                                     />
                                 </AspectRatio>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Simulation</h3>
+                            <h3 className="text-xl font-bold text-white">High Degree-of-Freedom</h3>
                         </div>
                         
                         {/* 功能 4 */}
@@ -214,13 +218,178 @@ export default function Home() {
                                 <AspectRatio ratio={16/9}>
                                     <Image
                                         src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
-                                        alt="Bilateral Force Feedback"
+                                        alt="Replaceable Standard Motors"
                                         fill
                                         className="object-cover"
                                     />
                                 </AspectRatio>
                             </div>
-                            <h3 className="text-xl font-bold text-white">Bilateral Force Feedback</h3>
+                            <h3 className="text-xl font-bold text-white">Replaceable Standard Motors</h3>
+                        </div>
+
+                        {/* 功能 5 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Never Overheating"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Never Overheating</h3>
+                        </div>
+
+                        {/* 功能 6 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Finger Tip & Pad Tactile Perception"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Finger Tip & Pad Tactile Perception</h3>
+                        </div>
+
+                        {/* 功能 7 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Finger Joint Angle Feedback"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Finger Joint Angle Feedback</h3>
+                        </div>
+
+                        {/* 功能 8 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Palm Wide-FoV Stereo Cameras"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Palm Wide-FoV Stereo Cameras</h3>
+                        </div>
+
+                        {/* 功能 9 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Tension-Sensing & Self-Tightening"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Tension-Sensing & Self-Tightening</h3>
+                        </div>
+
+                        {/* 功能 10 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Rapid Finger/Motor Replacement"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Rapid Finger / Motor Replacement</h3>
+                        </div>
+
+                        {/* 功能 11 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Adaptable to Various Robotics Arms"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Adaptable to Various Robotics Arms</h3>
+                        </div>
+
+                        {/* 功能 12 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="3D Printed Structure for Easy Modification"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">3D Printed Structure for Easy Modification</h3>
+                        </div>
+
+                        {/* 功能 13 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Open Sensor Interfaces for Arduino Development"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Open Sensor Interfaces for Arduino Development</h3>
+                        </div>
+
+                        {/* 功能 14 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Open Interfaces for Multiple Motor Options"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Open Interfaces for Multiple Motor Options</h3>
+                        </div>
+
+                        {/* 功能 15 */}
+                        <div className="flex flex-col items-center">
+                            <div className="w-full h-64 rounded-xl overflow-hidden mb-4">
+                                <AspectRatio ratio={16/9}>
+                                    <Image
+                                        src="https://assets.kinetixai.cn/kinetixai/index/feature4.jpg"
+                                        alt="Fully Open Source with Starter Kits"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </AspectRatio>
+                            </div>
+                            <h3 className="text-xl font-bold text-white">Fully Open Source with Starter Kits</h3>
                         </div>
                     </div>
                 </div>
@@ -230,7 +399,7 @@ export default function Home() {
             <div className="w-full px-6 py-16 md:px-20 md:py-24 bg-black/5">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                        Project Timeline
+                        Timeline
                     </h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
